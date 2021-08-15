@@ -1,0 +1,9 @@
+# gatsby config files
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js
+
+# generated folders
+.cache
+public
