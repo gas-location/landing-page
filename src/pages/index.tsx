@@ -1,23 +1,19 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
 
 import { SEO } from '../components';
+import Greetings from '../components/greetings';
 import Layout from '../components/layout';
+import usePageContent from '../hooks';
 
-const IndexPage: FC = () => (
-  <Layout>
-    <SEO />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-  </Layout>
-);
+const IndexPage: FC = () => {
+  const { navItems, navLogo, greetings } = usePageContent();
+
+  return (
+    <Layout navItems={navItems} navLogo={navLogo}>
+      <SEO />
+      <Greetings {...greetings} />
+    </Layout>
+  );
+};
 
 export default IndexPage;

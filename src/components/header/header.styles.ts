@@ -2,15 +2,67 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 export const HeaderWrapper = styled.header`
-  margin-bottom: 1.45rem;
-  background: rebeccapurple;
+  top: 0;
+  position: sticky;
+  background: #ffffff;
 `;
+
 export const HeaderContent = styled.div`
+  display: flex;
+  padding: 1rem;
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  align-items: center;
+  justify-content: space-between;
 `;
+
+export const LogoWrapper = styled(Link)`
+  height: 3.5rem;
+`;
+
 export const HeaderLink = styled(Link)`
-  color: white;
+  color: #000000;
+  display: inline-block;
   text-decoration: none;
+`;
+
+export const Nav = styled.nav`
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+`;
+
+export const Menu = styled.div`
+  display: inline-flex;
+  @media (min-width: 600px) {
+    display: none;
+  }
+`;
+
+export const MenuList = styled.ul`
+  right: 0;
+  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  margin-top: 2rem;
+  position: absolute;
+  margin-right: 0.6rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  flex-direction: column;
+  box-shadow: 0 0 0.5rem 0 #0002;
+`;
+
+export const MenuItem = styled.li`
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  &:hover {
+    background-color: #eee;
+  }
+`;
+
+export const Image = styled.img`
+  height: 100%;
 `;
