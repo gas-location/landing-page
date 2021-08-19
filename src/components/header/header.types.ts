@@ -1,3 +1,13 @@
+export interface INavItem {
+  id: string;
+  name: string;
+}
+export interface INavLogo {
+  name: string;
+  image: string;
+}
+
 export interface HeaderProps {
-  siteTitle: string;
+  navLogo: INavLogo;
+  navItems: ReadonlyArray<INavItem>;
 }
