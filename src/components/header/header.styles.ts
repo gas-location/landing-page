@@ -17,7 +17,10 @@ export const HeaderContent = styled.div`
 `;
 
 export const LogoWrapper = styled(Link)`
-  height: 3.5rem;
+  height: 2.5rem;
+  @media (min-width: 600px) {
+    height: 3.5rem;
+  }
 `;
 
 export const HeaderLink = styled(Link)`
@@ -34,6 +37,7 @@ export const Nav = styled.nav`
 `;
 
 export const Menu = styled.div`
+  max-height: 2rem;
   display: inline-flex;
   @media (min-width: 600px) {
     display: none;
@@ -43,15 +47,20 @@ export const Menu = styled.div`
 export const MenuList = styled.ul`
   right: 0;
   z-index: 1;
+  width: 20rem;
   padding: 1rem;
   display: flex;
-  margin-top: 2rem;
-  position: absolute;
+  position: fixed;
+  margin-top: 1rem;
   margin-right: 0.6rem;
   border-radius: 0.7rem;
   background-color: #fff;
   flex-direction: column;
   box-shadow: 0 0 0.5rem 0 #0002;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
 `;
 
 export const MenuItem = styled.li`
