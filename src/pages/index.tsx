@@ -9,7 +9,7 @@ const IndexPage: FC = () => {
     <Layout navItems={navItems} navLogo={navLogo}>
       <SEO />
       <Home {...home} />
-      <Services {...services} /
+      <Services {...services} />
       <Contacts {...contacts} />
     </Layout>
   );
