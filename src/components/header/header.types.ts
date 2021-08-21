@@ -3,6 +3,7 @@ export interface INavItem {
   name: string;
   order: number;
 }
+
 export interface INavLogo {
   name: string;
   image: string;
