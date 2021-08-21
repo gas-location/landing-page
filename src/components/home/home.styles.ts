@@ -31,9 +31,16 @@ export const ContainerWrapper = styled.div`
 `;
 
 export const Content = styled.p`
+  display: flex;
   padding: 0 1rem;
+  height: 40vh;
   max-width: 40rem;
+  max-height: 30rem;
+  min-height: 20rem;
   text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   @media (min-width: 600px) {
     text-align: left;
   }

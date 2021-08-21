@@ -18,8 +18,10 @@ const Home: FC<HomeProps> = ({ id, image, title, mainText, buttonText }) => (
     <ContainerWrapper>
       <Container>
         <Content>
-          <H1>{title}</H1>
-          <Description>{mainText}</Description>
+          <div>
+            <H1>{title}</H1>
+            <Description>{mainText}</Description>
+          </div>
           <button>{buttonText}</button>
         </Content>
       </Container>
