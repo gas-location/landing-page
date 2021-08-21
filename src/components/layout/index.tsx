@@ -4,16 +4,14 @@ import React, { FC } from 'react';
 import GlobalStyles from '../../styles/global';
 import Footer from '../footer';
 import Header from '../header';
-import { Content } from './layout.styles';
+import { LayoutProps } from './layout.types';
 
-const Layout: FC = ({ children }) => (
+const Layout: FC<LayoutProps> = ({ navItems, navLogo, children }) => (
   <>
     <Global styles={GlobalStyles} />
-    <Header siteTitle="GasLocation" />
-    <Content>
-      <main>{children}</main>
-      <Footer />
-    </Content>
+    <Header navItems={navItems} navLogo={navLogo} />
+    <main>{children}</main>
+    <Footer />
   </>
 );
 
