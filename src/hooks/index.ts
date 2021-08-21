@@ -112,6 +112,34 @@ const usePageContent: TUsePageContent = () => {
           }
         }
       }
+      allContentfulLandingPageServices {
+        edges {
+          node {
+            backgroundImage {
+              fluid {
+                src
+              }
+            }
+            buttonText
+            description
+            contentfulid
+            title
+          }
+        }
+      }
+      allContentfulLandingPageService {
+        edges {
+          node {
+            name
+            order
+            image {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `);
 

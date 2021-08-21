@@ -5,12 +5,11 @@ import usePageContent from '../hooks';
 
 const IndexPage: FC = () => {
   const { navItems, navLogo, home, services, contacts } = usePageContent();
-
   return (
     <Layout navItems={navItems} navLogo={navLogo}>
       <SEO />
       <Home {...home} />
-      <Services {...services} />
+      <Services {...services} /
       <Contacts {...contacts} />
     </Layout>
   );
