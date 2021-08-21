@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const H1 = styled.h1`
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 4rem;
 `;
 
 export const H2 = styled.h2`

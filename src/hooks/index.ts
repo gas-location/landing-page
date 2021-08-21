@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+import { getContactsFromContentful } from '../components/contacts/contacts.helpers';
+import { ContactsProps } from '../components/contacts/contacts.types';
 import {
   getNavItemsFromContentful,
   getNavLogoFromContentful,
@@ -15,6 +17,7 @@ type TUsePageContent = () => {
   home: HomeProps;
   navItems: ReadonlyArray<INavItem>;
   services: ServicesProps;
+  contacts: ContactsProps;
 };
 
 const usePageContent: TUsePageContent = () => {
@@ -84,6 +87,31 @@ const usePageContent: TUsePageContent = () => {
           }
         }
       }
+      allContentfulLandingPageSocialMedia {
+        edges {
+          node {
+            link
+            key
+          }
+        }
+      }
+      allContentfulLandingPageContacts {
+        edges {
+          node {
+            address
+            description
+            email
+            phone
+            title
+            contentfulid
+            backgroundImage {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -92,6 +120,7 @@ const usePageContent: TUsePageContent = () => {
     navItems: getNavItemsFromContentful(pageContent),
     home: getHomeFromContentful(pageContent),
     services: getServicesFromContentful(pageContent),
+    contacts: getContactsFromContentful(pageContent),
   };
 };
 

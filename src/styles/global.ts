@@ -32,7 +32,7 @@ const GlobalStyles = css`
   h2,
   h3,
   h4 {
-    line-height: 2;
+    margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
   }
   button {
@@ -46,10 +46,32 @@ const GlobalStyles = css`
     border-radius: 0.8rem;
   }
   a {
+    color: inherit;
     text-decoration: none;
   }
   li {
     list-style: none;
+  }
+  input[type='text'],
+  textarea {
+    width: 100%;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 0.2px solid #00000033;
+  }
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'] {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 0.8rem;
+    background-color: #263238;
   }
 `;
 
