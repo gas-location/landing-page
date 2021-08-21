@@ -1,17 +1,19 @@
 import React, { FC } from 'react';
 
 import { SEO } from '../components';
-import Greetings from '../components/greetings';
+import Home from '../components/home';
 import Layout from '../components/layout';
+import Services from '../components/services';
 import usePageContent from '../hooks';
 
 const IndexPage: FC = () => {
-  const { navItems, navLogo, greetings } = usePageContent();
+  const { navItems, navLogo, home, services } = usePageContent();
 
   return (
     <Layout navItems={navItems} navLogo={navLogo}>
       <SEO />
-      <Greetings {...greetings} />
+      <Home {...home} />
+      <Services {...services} />
     </Layout>
   );
 };

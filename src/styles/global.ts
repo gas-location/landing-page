@@ -39,6 +39,7 @@ const GlobalStyles = css`
     border: none;
     outline: none;
     color: #030f1c;
+    cursor: pointer;
     font-size: 1.2rem;
     background: #eba22f;
     padding: 1rem 1.5rem;

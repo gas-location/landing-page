@@ -1,4 +1,5 @@
-export interface GreetingsProps {
+export interface HomeProps {
+  id: string;
   image: string;
   title: string;
   mainText: string;

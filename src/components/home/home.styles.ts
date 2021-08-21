@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
-export const GreetingsWrapper = styled.section`
+export const HomeWrapper = styled.section`
   width: 100vw;
   display: flex;
   overflow: hidden;
-  align-items: center;
+  position: relative;
   justify-content: center;
   height: calc(100vh - 5.5vw);
 `;
@@ -12,9 +12,8 @@ export const GreetingsWrapper = styled.section`
 export const ImageWrapper = styled.div`
   z-index: -1;
   width: 100vw;
-  overflow: hidden;
+  height: 100%;
   position: absolute;
-  height: calc(100vh - 5.5vw);
 `;
 
 export const Image = styled.img`
@@ -22,16 +21,13 @@ export const Image = styled.img`
   min-height: 100%;
 `;
 
-export const Title = styled.h1`
-  color: #ffffff;
-  font-size: 3rem;
-`;
-
-export const Description = styled.p`
-  color: #ffffff;
-  font-weight: 200;
-  font-size: 1.2rem;
-  margin-bottom: 8rem;
+export const ContainerWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0007;
 `;
 
 export const Content = styled.p`
