@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 export const HeaderWrapper = styled.header`
   top: 0;
+  z-index: 1;
   position: sticky;
   background: #ffffff;
 `;
@@ -25,8 +26,13 @@ export const LogoWrapper = styled(Link)`
 
 export const HeaderLink = styled(Link)`
   color: #000000;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
   display: inline-block;
   text-decoration: none;
+  &:hover {
+    background-color: #eee;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -65,11 +71,6 @@ export const MenuList = styled.ul`
 
 export const MenuItem = styled.li`
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  &:hover {
-    background-color: #eee;
-  }
 `;
 
 export const Image = styled.img`

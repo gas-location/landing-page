@@ -1,17 +1,20 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { getGreetingsFromContentful } from '../components/greetings/greetings.helpers';
 import {
   getNavItemsFromContentful,
   getNavLogoFromContentful,
 } from '../components/header/header.helpers';
 import { INavItem, INavLogo } from '../components/header/header.types';
-import { GreetingsProps } from './../components/greetings/greetings.types';
+import { getHomeFromContentful } from '../components/home/home.helpers';
+import { HomeProps } from '../components/home/home.types';
+import { getServicesFromContentful } from '../components/services/services.helpers';
+import { ServicesProps } from '../components/services/services.types';
 
 type TUsePageContent = () => {
   navLogo: INavLogo;
-  greetings: GreetingsProps;
+  home: HomeProps;
   navItems: ReadonlyArray<INavItem>;
+  services: ServicesProps;
 };
 
 const usePageContent: TUsePageContent = () => {
@@ -21,6 +24,7 @@ const usePageContent: TUsePageContent = () => {
         edges {
           node {
             name
+            order
             contentfulid
           }
         }
@@ -43,7 +47,36 @@ const usePageContent: TUsePageContent = () => {
             mainText
             title
             buttonText
+            contentfulid
             backgroundImage {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
+      allContentfulLandingPageServices {
+        edges {
+          node {
+            backgroundImage {
+              fluid {
+                src
+              }
+            }
+            buttonText
+            description
+            contentfulid
+            title
+          }
+        }
+      }
+      allContentfulLandingPageService {
+        edges {
+          node {
+            name
+            order
+            image {
               fluid {
                 src
               }
@@ -57,7 +90,8 @@ const usePageContent: TUsePageContent = () => {
   return {
     navLogo: getNavLogoFromContentful(pageContent),
     navItems: getNavItemsFromContentful(pageContent),
-    greetings: getGreetingsFromContentful(pageContent),
+    home: getHomeFromContentful(pageContent),
+    services: getServicesFromContentful(pageContent),
   };
 };
 
