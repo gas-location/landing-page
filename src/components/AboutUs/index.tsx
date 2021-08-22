@@ -1,35 +1,58 @@
 import React, { FC } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import {AboutUsWrapper, LogoImage, ContentWrapper,Subtitle,Title,Description,Values} from './aboutUs.styles';
 
-const AboutUs: FC = () => (
-    <AboutUsWrapper> 
-      <LogoImage src="./../images/logo.png" alt="background" loading="lazy"/>
-      <ContentWrapper>
-          <div>
-            <Subtitle>Quem Somos?</Subtitle>
-            <Title>Gas Location</Title>
-            <Description>Somos uma startup angolana que visa criar uma plataforma que permita você saber em tempo real, a disponibilidade de diversos serviços conectados ao seu automóvel. Desde empresas distribuidoras de combustível à revendedores de gás, estações de serviço e muito mais!</Description>
-          </div>
-          <Values>
-            <div>
-              <img src="" alt=""/>
-                <h4><strong>Missão</strong></h4>
-                <p>Disponibilizar informação em tempo real</p>
-            </div>
-            <div>
-              <img src="" alt=""/>
-              <h4><strong>visão</strong></h4>
-              <p>Alcançar o maior número de serviços de automóveis.</p>
-              </div>
-              <div>
-                <img src="" alt=""/>
-                  <h4><strong>Valores</strong></h4>
-                  <p>Comprometimento, transparência e Vontade.</p>
-              </div>
-          </Values>
-      </ContentWrapper>
-    </AboutUsWrapper>
-  );
-  
-  export default AboutUs;
+import {
+  AboutUsWrapper,
+  ContentWrapper,
+  Description,
+  LogoImage,
+  Subtitle,
+  Title,
+  Values,
+} from './aboutUs.styles';
+import { AboutUsProps } from './aboutUs.types';
+
+const AboutUs: FC<AboutUsProps> = ({
+  id,
+  subtitle,
+  vision,
+  values,
+  title,
+  mission,
+  description,
+  img,
+}) => (
+  <AboutUsWrapper id={id}>
+    <LogoImage src={img} alt="background" loading="lazy" />
+    <ContentWrapper>
+      <div>
+        <Subtitle>{subtitle}</Subtitle>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </div>
+      <Values>
+        <div>
+          <img src="" alt="" />
+          <h4>
+            <strong>Missão</strong>
+          </h4>
+          <p>{mission}</p>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h4>
+            <strong>Vissão</strong>
+          </h4>
+          <p>{vision}</p>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h4>
+            <strong>Valores</strong>
+          </h4>
+          <p>{values}</p>
+        </div>
+      </Values>
+    </ContentWrapper>
+  </AboutUsWrapper>
+);
+export default AboutUs;

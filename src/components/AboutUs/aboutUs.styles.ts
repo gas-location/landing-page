@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
 
-export const AboutUsWrapper = styled.div`
+export const AboutUsWrapper = styled.section`
   display: flex;
   flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 6rem 2rem 1.45rem;
   @media (min-width: 600px) {
     flex-direction: row;
   }
@@ -10,6 +13,10 @@ export const AboutUsWrapper = styled.div`
 
 export const LogoImage = styled.img`
   width: 60%;
+  margin: auto;
+  @media (min-width: 600px) {
+    width: 40%;
+  }
 `;
 
 export const ContentWrapper = styled.div`
