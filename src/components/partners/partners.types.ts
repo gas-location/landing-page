@@ -1,6 +1,6 @@
 export interface PartnerProps {
-  name: string;
   img: string;
+  name: string;
 }
 
 export interface PartnersProps {
