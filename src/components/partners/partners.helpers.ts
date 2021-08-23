@@ -6,6 +6,7 @@ const getPartnerFromContentful = (
   const {
     node: { partners },
   } = content.allContentfulLandingPagePartners.edges[0];
+
   return partners.map(({ title, fluid }: any) => ({
     name: title,
     img: fluid.src,
