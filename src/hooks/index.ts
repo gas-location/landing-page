@@ -169,7 +169,6 @@ const usePageContent: TUsePageContent = () => {
           node {
             contentfulid
             description
-            id
             title
             partners {
               title

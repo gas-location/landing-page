@@ -14,6 +14,7 @@ import usePageContent from '../hooks';
 const IndexPage: FC = () => {
   const { navItems, navLogo, home, services, contacts, aboutUs, partners } =
     usePageContent();
+
   return (
     <Layout navItems={navItems} navLogo={navLogo}>
       <SEO />
