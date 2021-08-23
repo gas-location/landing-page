@@ -2,6 +2,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { getAboutUsFromContentful } from '../components/aboutUs/aboutUs.helpers';
 import { AboutUsProps } from '../components/aboutUs/aboutUs.types';
+import { getPartnersFromContentful } from '../components/partners/partners.helpers';
+import { PartnersProps } from '../components/partners/partners.types';
 import { getContactsFromContentful } from '../components/contacts/contacts.helpers';
 import { ContactsProps } from '../components/contacts/contacts.types';
 import {
@@ -19,6 +21,7 @@ type TUsePageContent = () => {
   home: HomeProps;
   navItems: ReadonlyArray<INavItem>;
   services: ServicesProps;
+  partners: PartnersProps;
   contacts: ContactsProps;
   aboutUs: AboutUsProps;
 };
@@ -161,6 +164,22 @@ const usePageContent: TUsePageContent = () => {
           }
         }
       }
+      allContentfulLandingPagePartners {
+        edges {
+          node {
+            contentfulid
+            description
+            id
+            title
+            partners {
+              title
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -171,6 +190,7 @@ const usePageContent: TUsePageContent = () => {
     services: getServicesFromContentful(pageContent),
     contacts: getContactsFromContentful(pageContent),
     aboutUs: getAboutUsFromContentful(pageContent),
+    partners: getPartnersFromContentful(pageContent),
   };
 };
 

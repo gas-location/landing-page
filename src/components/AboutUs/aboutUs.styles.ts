@@ -5,7 +5,7 @@ export const AboutUsWrapper = styled.section`
   flex-flow: column nowrap;
   margin: 0 auto;
   max-width: 960px;
-  padding: 6rem 2rem 1.45rem;
+  padding: 3rem 2rem 1.45rem;
   @media (min-width: 600px) {
     flex-direction: row;
   }
@@ -19,7 +19,7 @@ export const LogoImage = styled.img`
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.aside`
   display: flex;
   flex-flow: column nowrap;
 `;
