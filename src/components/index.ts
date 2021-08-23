@@ -5,3 +5,4 @@ export { default as SEO } from './seo';
 export { default as Services } from './services';
 export { default as AboutUs } from './aboutUs';
 export { default as Partners } from './partners';
+export { default as Solution } from './solution';

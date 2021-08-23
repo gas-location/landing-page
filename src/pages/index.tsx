@@ -8,17 +8,27 @@ import {
   Partners,
   SEO,
   Services,
+  Solution,
 } from '../components';
 import usePageContent from '../hooks';
 
 const IndexPage: FC = () => {
-  const { navItems, navLogo, home, services, contacts, aboutUs, partners } =
-    usePageContent();
+  const {
+    navItems,
+    navLogo,
+    home,
+    services,
+    contacts,
+    aboutUs,
+    partners,
+    solution,
+  } = usePageContent();
   return (
     <Layout navItems={navItems} navLogo={navLogo}>
       <SEO />
       <Home {...home} />
       <AboutUs {...aboutUs} />
+      <Solution {...solution} />
       <Services {...services} />
       <Partners {...partners} />
       <Contacts {...contacts} />

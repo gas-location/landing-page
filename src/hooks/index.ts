@@ -4,6 +4,7 @@ import { getAboutUsFromContentful } from '../components/aboutUs/aboutUs.helpers'
 import { AboutUsProps } from '../components/aboutUs/aboutUs.types';
 import { getPartnersFromContentful } from '../components/partners/partners.helpers';
 import { PartnersProps } from '../components/partners/partners.types';
+import { SolutionProps } from '../components/solution/solution.types';
 import { getContactsFromContentful } from '../components/contacts/contacts.helpers';
 import { ContactsProps } from '../components/contacts/contacts.types';
 import {
@@ -15,6 +16,7 @@ import { getHomeFromContentful } from '../components/home/home.helpers';
 import { HomeProps } from '../components/home/home.types';
 import { getServicesFromContentful } from '../components/services/services.helpers';
 import { ServicesProps } from '../components/services/services.types';
+import { getSolutionFromContentful } from '../components/solution/solution.helpers';
 
 type TUsePageContent = () => {
   navLogo: INavLogo;
@@ -24,6 +26,7 @@ type TUsePageContent = () => {
   partners: PartnersProps;
   contacts: ContactsProps;
   aboutUs: AboutUsProps;
+  solution: SolutionProps;
 };
 
 const usePageContent: TUsePageContent = () => {
@@ -180,6 +183,25 @@ const usePageContent: TUsePageContent = () => {
           }
         }
       }
+      allContentfulLandingPageSolution {
+        edges {
+          node {
+            description
+            title
+            illustration {
+              fluid {
+                src
+              }
+            }
+            contentfulid
+            solution {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -191,6 +213,7 @@ const usePageContent: TUsePageContent = () => {
     contacts: getContactsFromContentful(pageContent),
     aboutUs: getAboutUsFromContentful(pageContent),
     partners: getPartnersFromContentful(pageContent),
+    solution: getSolutionFromContentful(pageContent),
   };
 };
 
