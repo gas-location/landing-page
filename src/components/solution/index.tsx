@@ -11,12 +11,13 @@ import {
 import { SolutionProps } from './solution.types';
 
 const Solution: FC<SolutionProps> = ({
+  id,
   title,
   description,
   mobileImage,
   illustrationImage,
 }) => (
-  <SolutionWrapper>
+  <SolutionWrapper id={id}>
     <Container>
       <Title>
         <strong>{title}</strong>

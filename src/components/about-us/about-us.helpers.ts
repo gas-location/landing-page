@@ -1,4 +1,4 @@
-import { AboutUsProps } from './aboutUs.types';
+import { AboutUsProps } from './about-us.types';
 
 export const getAboutUsFromContentful = (content: any): AboutUsProps => {
   const { node } = content.allContentfulLandingPageAboutUs.edges[0];

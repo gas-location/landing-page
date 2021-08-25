@@ -8,8 +8,8 @@ import {
   Subtitle,
   Title,
   Values,
-} from './aboutUs.styles';
-import { AboutUsProps } from './aboutUs.types';
+} from './about-us.styles';
+import { AboutUsProps } from './about-us.types';
 
 const AboutUs: FC<AboutUsProps> = ({
   id,
@@ -55,4 +55,5 @@ const AboutUs: FC<AboutUsProps> = ({
     </ContentWrapper>
   </AboutUsWrapper>
 );
+
 export default AboutUs;

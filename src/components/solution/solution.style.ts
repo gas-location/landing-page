@@ -1,54 +1,57 @@
 import styled from '@emotion/styled';
 
 export const SolutionWrapper = styled.section`
-  padding: 3rem 2rem 1.45rem;
+  padding: 6rem 0;
   background: #eba22f;
 `;
 
 export const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   max-width: 960px;
-  margin: 0 auto;
+  padding: 0 2rem 1.45rem;
   @media (min-width: 600px) {
-    grid-template-column: 60% 40%;
+    display: grid;
+    margin: 0 auto;
   }
 `;
 
 export const Title = styled.h1`
-  grid-row: 1/2;
-  grid-column: 1/2;
+  font-weight: 400;
+  font-size: 2.4rem;
+  @media (min-width: 600px) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    max-width: 80%;
+  }
 `;
 
 export const Illustration = styled.img`
-  grid-row: 2/3;
-  grid-column: 1/2;
-  margin: 0 auto;
-  object-fit: scale-down;
+  width: 60%;
   @media (min-width: 600px) {
     grid-row: 3/4;
-    width: 70%;
-    height: fit-content;
+    grid-column: 1/2;
+    margin: 0 auto;
+    object-fit: scale-down;
   }
 `;
 export const Description = styled.p`
-  grid-row: 3/4;
-  grid-column: 1/2;
-  margin: 5% 0;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  font-weight: 300;
   @media (min-width: 600px) {
     grid-row: 2/3;
-    margin: 0 2.5% 0 0;
+    grid-column: 1/2;
+    margin: 5% 5% 5% 0;
   }
 `;
 
 export const MobileImage = styled.img`
-  grid-row: 4/5;
-  grid-column: 1/2;
-  margin: 0 auto;
+  align-self: flex-end;
+  margin-top: 5%;
   @media (min-width: 600px) {
     grid-row: 1/4;
     grid-column: 2/3;
-    width: 100%;
-    margin 0 0 0 auto;
+    margin: 0;
   }
 `;

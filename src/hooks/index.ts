@@ -1,10 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { getAboutUsFromContentful } from '../components/aboutUs/aboutUs.helpers';
-import { AboutUsProps } from '../components/aboutUs/aboutUs.types';
-import { getPartnersFromContentful } from '../components/partners/partners.helpers';
-import { PartnersProps } from '../components/partners/partners.types';
-import { SolutionProps } from '../components/solution/solution.types';
+import { getAboutUsFromContentful } from '../components/about-us/about-us.helpers';
+import { AboutUsProps } from '../components/about-us/about-us.types';
 import { getContactsFromContentful } from '../components/contacts/contacts.helpers';
 import { ContactsProps } from '../components/contacts/contacts.types';
 import {
@@ -14,9 +11,12 @@ import {
 import { INavItem, INavLogo } from '../components/header/header.types';
 import { getHomeFromContentful } from '../components/home/home.helpers';
 import { HomeProps } from '../components/home/home.types';
+import { getPartnersFromContentful } from '../components/partners/partners.helpers';
+import { PartnersProps } from '../components/partners/partners.types';
 import { getServicesFromContentful } from '../components/services/services.helpers';
 import { ServicesProps } from '../components/services/services.types';
 import { getSolutionFromContentful } from '../components/solution/solution.helpers';
+import { SolutionProps } from '../components/solution/solution.types';
 
 type TUsePageContent = () => {
   navLogo: INavLogo;
@@ -172,7 +172,6 @@ const usePageContent: TUsePageContent = () => {
           node {
             contentfulid
             description
-            id
             title
             partners {
               title
