@@ -5,7 +5,7 @@ export const AboutUsWrapper = styled.section`
   flex-flow: column nowrap;
   margin: 0 auto;
   max-width: 960px;
-  padding: 3rem 2rem 1.45rem;
+  padding: 6rem 4rem 5rem;
   @media (min-width: 600px) {
     flex-direction: row;
   }
