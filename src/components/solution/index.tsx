@@ -7,7 +7,7 @@ import {
   MobileImage,
   SolutionWrapper,
   Title,
-} from './solution.style';
+} from './solution.styles';
 import { SolutionProps } from './solution.types';
 
 const Solution: FC<SolutionProps> = ({

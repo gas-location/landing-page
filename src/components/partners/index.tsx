@@ -5,7 +5,7 @@ import {
   PartnersContainer,
   PartnersImagesContainer,
   PartnersWrapper,
-} from './partners.style';
+} from './partners.styles';
 import { PartnerProps, PartnersProps } from './partners.types';
 
 const Partners: FC<PartnersProps> = ({ id, title, description, partners }) => (
