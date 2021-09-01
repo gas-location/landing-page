@@ -30,10 +30,10 @@ export const ContainerWrapper = styled.div`
   background-color: #0007;
 `;
 
-export const Content = styled.p`
+export const Content = styled.div`
+  height: 40vh;
   display: flex;
   padding: 0 1rem;
-  height: 40vh;
   max-width: 40rem;
   max-height: 30rem;
   min-height: 20rem;

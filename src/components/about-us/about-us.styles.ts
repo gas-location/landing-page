@@ -24,13 +24,13 @@ export const ContentWrapper = styled.aside`
   flex-flow: column nowrap;
 `;
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h1`
   font-weight: 600;
   margin-bottom: 1%;
   font-size: 1.5rem;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   margin-bottom: 0.5%;
   font-weight: 400;
   font-size: 2rem;
