@@ -43,7 +43,7 @@ const Contacts: FC<ContactsProps> = ({
   <ContactsWrapper id={id}>
     <ContactsSide>
       <ImageWrapper>
-        <Image src={image} alt="background" />
+        <Image src={image} alt="background" loading="lazy" />
       </ImageWrapper>
       <ContactsContainer>
         <ContactsContent>
@@ -62,8 +62,13 @@ const Contacts: FC<ContactsProps> = ({
             <ContactsInfoText>{email}</ContactsInfoText>
           </ContactsInfo>
           <div>
-            {socialMedias.map(({ key, link }, index) => (
-              <SocialLink to={link} key={index}>
+            {socialMedias.map(({ key, link }) => (
+              <SocialLink
+                key={link}
+                href={link}
+                target="__blank"
+                aria-label={key}
+              >
                 <SocialIcon social={key} size="2rem" />
               </SocialLink>
             ))}

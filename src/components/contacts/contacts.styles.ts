@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
 export const ContactsWrapper = styled.section`
   @media (min-width: 600px) {
@@ -66,6 +65,6 @@ export const ContactsForm = styled.form`
   justify-content: space-between;
 `;
 
-export const SocialLink = styled(Link)`
+export const SocialLink = styled.a`
   margin-right: 2rem;
 `;

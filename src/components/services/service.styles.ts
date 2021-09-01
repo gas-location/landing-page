@@ -61,8 +61,10 @@ export const ServiceImageWrapper = styled.div`
   width: 6rem;
   height: 6rem;
   margin: auto;
+  display: flex;
   overflow: hidden;
   border-radius: 1.5rem;
+  justify-content: center;
   @media (min-width: 600px) {
     width: 8rem;
     height: 8rem;
@@ -71,7 +73,7 @@ export const ServiceImageWrapper = styled.div`
 `;
 
 export const ServiceImage = styled.img`
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
 `;
 
