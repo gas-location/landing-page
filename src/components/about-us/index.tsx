@@ -32,23 +32,23 @@ const AboutUs: FC<AboutUsProps> = ({
       <Values>
         <div>
           <img src="" alt="" />
-          <h4>
+          <h3>
             <strong>Missão</strong>
-          </h4>
+          </h3>
           <p>{mission}</p>
         </div>
         <div>
           <img src="" alt="" />
-          <h4>
+          <h3>
             <strong>Vissão</strong>
-          </h4>
+          </h3>
           <p>{vision}</p>
         </div>
         <div>
           <img src="" alt="" />
-          <h4>
+          <h3>
             <strong>Valores</strong>
-          </h4>
+          </h3>
           <p>{values}</p>
         </div>
       </Values>

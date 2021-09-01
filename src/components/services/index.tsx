@@ -23,7 +23,7 @@ const Services: FC<ServicesProps> = ({
 }) => (
   <ServicesSection id={id}>
     <ImageWrapper>
-      <Image src={image}></Image>
+      <Image src={image} alt={title} />
     </ImageWrapper>
     <ContainerWrapper>
       <Container>

@@ -1,4 +1,4 @@
-import react, {FC} from 'react';
+import React, { FC } from 'react';
 
 import {
   Container,
@@ -22,9 +22,9 @@ const Solution: FC<SolutionProps> = ({
       <Title>
         <strong>{title}</strong>
       </Title>
-      <Illustration src={illustrationImage} />
+      <Illustration src={illustrationImage} alt="illustration" />
       <Description>{description}</Description>
-      <MobileImage src={mobileImage} />
+      <MobileImage src={mobileImage} alt="mobile" />
     </Container>
   </SolutionWrapper>
 );

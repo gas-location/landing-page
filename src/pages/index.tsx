@@ -25,7 +25,7 @@ const IndexPage: FC = () => {
   } = usePageContent();
   return (
     <Layout navItems={navItems} navLogo={navLogo}>
-      <SEO />
+      <SEO lang="pt" description={aboutUs.description} />
       <Home {...home} />
       <AboutUs {...aboutUs} />
       <Solution {...solution} />
