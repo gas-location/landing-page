@@ -23,7 +23,7 @@ export const PartnersImagesContainer = styled.div`
   min-width: 60%;
   & > img {
     width: auto;
-    height: 2rem;
+    object-fit: contain;
     margin-right: 5%;
   }
 `;

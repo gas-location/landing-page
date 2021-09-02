@@ -39,11 +39,12 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-size: 1.15rem;
   font-weight: 300;
+  text-align: justify;
 `;
 
 export const Values = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   margin-top: 15%;
 
@@ -52,11 +53,11 @@ export const Values = styled.div`
     flex-flow: column nowrap;
     width: 40%;
     margin: 2.5% 5%;
+    text-align: center;
   }
 
   & > div > p,
   & > div > h4 {
-    text-align: center;
     margin: 2% 0;
   }
   @media (min-width: 600px) {
